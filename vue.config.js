@@ -8,5 +8,9 @@ module.exports = {
                 languages: ['json', 'javascript', 'html', 'xml']
             }
         ])
+    },
+    devServer: {
+
+        host: 'localhost'
     }
 }
