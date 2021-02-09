@@ -1,9 +1,9 @@
 <template>
-  <div class="col">
+  <div class="col col-md-12">
     <h4>{{ header }}</h4>
     <table class="table table-striped table-hover">
       <thead class="table-dark">
-      <tr @click="toggleFilters">
+      <tr @click="toggleFilters" class="linkable">
         <th scope="col">Status</th>
         <th scope="col">Date</th>
         <th scope="col">Subject</th>
@@ -78,6 +78,9 @@ export default {
       })
     },
     toggleFilters() {
+      if(this.header === 'Recent') {
+        return;
+      }
       this.showFilter = !this.showFilter
     },
     filter() {
@@ -107,5 +110,8 @@ export default {
 }
 .filter-input {
   width: 100%;
+}
+.linkable {
+  cursor: pointer;
 }
 </style>

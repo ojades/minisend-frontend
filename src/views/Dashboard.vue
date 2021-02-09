@@ -9,6 +9,11 @@
     <div class="row section">
       <TransactionsList :transactions="transactions.data" :header="'Recent'"></TransactionsList>
     </div>
+    <div class="row section text-center">
+      <div class="col col-md-12">
+        <a href="/transactions"><span class="spec-link">Show more >>></span></a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,5 +50,8 @@ export default {
 <style scoped>
 .section {
   margin-bottom: 50px;
+}
+.spec-link {
+
 }
 </style>
